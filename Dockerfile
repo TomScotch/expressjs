@@ -19,12 +19,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		usbutils \
 	&& rm -rf /var/lib/apt/lists/*
 
-RUN cd /root ; git clone https://github.com/tomscotch/expressjs.git
+RUN cd /opt ; git clone https://github.com/tomscotch/expressjs.git
 
-WORKDIR /root/expressjs/
+WORKDIR /opt/expressjs/
 
 RUN npm install
 
 EXPOSE 80
 
-CMD ["cd","/root/expressjs/",";","node", "index.js"]
+CMD ["node", "index.js"]
