@@ -6,7 +6,7 @@ volumes:
 services:
 
   mysql:
-    image: linuxserver/mariadb
+    image: linuxserver/mariadb:arm32v7-latest
     volumes:
       - "resin-data:/data"
     ports:
