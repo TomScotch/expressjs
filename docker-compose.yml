@@ -14,7 +14,7 @@ services:
     privileged: true
 
   nodejs:
-    build: ./Dockerfile.nodejs
+    build: .
     volumes:
       - "resin-data:/data"
     ports:
