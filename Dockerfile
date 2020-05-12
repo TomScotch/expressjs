@@ -20,7 +20,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		usbutils \
 	&& rm -rf /var/lib/apt/lists/*
 
-COPY . /root
+COPY config.js  /root 
+COPY controllers  /root 
+COPY index.html  /root 
+COPY index.js /root
+COPY login.html /root 
+COPY packages.json /root 
+COPY register.html /root
+COPY users.sql /root
 
 RUN cd /root && npm install
 
