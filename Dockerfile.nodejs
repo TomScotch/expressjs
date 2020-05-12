@@ -1,6 +1,6 @@
 FROM balenalib/raspberrypi3-ubuntu-node
 
-WORKDIR /etc
+WORKDIR /etc/
 
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -20,9 +20,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		i2c-tools \
 		usbutils \
 	&& rm -rf /var/lib/apt/lists/*
-
-RUN apt-get update && apt-get install -y \
-		nodejs mariadb-server
 
 COPY . /etc
 

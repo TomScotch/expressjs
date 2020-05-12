@@ -1,0 +1,22 @@
+version: '2'
+
+volumes:
+    resin-data:
+
+services:
+
+  mysql:
+    image: mariadb
+    volumes:
+      - "resin-data:/data"
+    expose:
+      - "3306"
+    privileged: true
+
+  nodejs:
+    build: Dockerfile.nodejs
+    volumes:
+      - "resin-data:/data"
+    expose:
+      - "80"
+    privileged: true
