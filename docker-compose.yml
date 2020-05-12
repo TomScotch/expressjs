@@ -12,7 +12,7 @@ services:
     ports:
       - "3306"
     privileged: true
-    restart: always
+    #restart: always
     network_mode: host
 
   nodejs:
