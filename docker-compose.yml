@@ -17,6 +17,8 @@ services:
 
   nodejs:
     build: .
+    depends_on:
+      - mysql
     volumes:
       - "resin-data:/data"
     ports:
