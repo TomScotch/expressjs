@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		usbutils \
 	&& rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/tomscotch/expressjs.git /opt/
+RUN git clone https://github.com/tomscotch/expressjs.git /opt/expressjs/
 
 WORKDIR /opt/expressjs/
 
