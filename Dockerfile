@@ -23,8 +23,8 @@ RUN cd /root ; git clone https://github.com/tomscotch/expressjs.git
 
 WORKDIR /root/expressjs/
 
-RUN cd /root/expressjs/ ; npm install express ; npm install
+RUN npm install
 
-RUN npm install -g express pug
 EXPOSE 80
-CMD ["node", "index.js"]
+
+CMD ["cd","/root/expressjs/",";","node", "index.js"]
