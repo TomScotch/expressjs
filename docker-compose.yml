@@ -12,6 +12,8 @@ services:
     ports:
       - "3306"
     privileged: true
+    restart: always
+    network_mode: host
 
   nodejs:
     build: .
@@ -20,3 +22,5 @@ services:
     ports:
       - "80"
     privileged: true
+    restart: always
+    network_mode: host

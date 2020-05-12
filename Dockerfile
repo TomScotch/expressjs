@@ -1,7 +1,6 @@
 FROM balenalib/raspberrypi3-ubuntu-node
 
-WORKDIR /etc/
-
+WORKDIR /root
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
 		software-properties-common \
@@ -21,9 +20,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		usbutils \
 	&& rm -rf /var/lib/apt/lists/*
 
-COPY . /etc
+COPY . /root
 
-RUN cd /etc/ && npm install
+RUN cd /root && npm install
 
 RUN npm install -g express nodemon pug
 EXPOSE 80
