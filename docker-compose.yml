@@ -9,14 +9,14 @@ services:
     image: mariadb
     volumes:
       - "resin-data:/data"
-    expose:
+    ports:
       - "3306"
     privileged: true
 
   nodejs:
-    build: Dockerfile.nodejs
+    build: ./Dockerfile.nodejs
     volumes:
       - "resin-data:/data"
-    expose:
+    ports:
       - "80"
     privileged: true
