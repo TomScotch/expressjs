@@ -2,7 +2,6 @@ FROM balenalib/raspberrypi3-ubuntu-node
 
 WORKDIR /etc
 
-COPY . /etc
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
 		software-properties-common \
@@ -25,8 +24,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN apt-get update && apt-get install -y \
 		nodejs mariadb-server
 
-RUN npm install
+COPY . /etc
+
+RUN cd /etc/ && npm install
 
 RUN npm install -g express nodemon pug
-
+EXPOSE 80
 CMD ["nodemon", "index.js"]
