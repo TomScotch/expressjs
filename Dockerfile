@@ -21,9 +21,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN cd opt ;  git clone https://github.com/tomscotch/expressjs.git
 
-#WORKDIR /opt/expressjs/
+WORKDIR /opt/expressjs/
 
-#RUN npm install
+RUN npm install express mysql cryptr
+
+RUN npm install
 
 EXPOSE 80
 
