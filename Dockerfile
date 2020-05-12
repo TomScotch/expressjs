@@ -23,11 +23,11 @@ RUN cd opt ;  git clone https://github.com/tomscotch/expressjs.git
 
 WORKDIR /opt/expressjs/
 
-RUN cd /opt/expressjs/ ; npm install express mysql cryptr
+#RUN cd /opt/expressjs/ ; npm install express mysql cryptr0
 
-RUN cd /opt/expressjs/ ; npm install
+#RUN cd /opt/expressjs/ ; npm install
 
-RUN cd /opt/expressjs/ ; mysql < users.sql
+#RUN cd /opt/expressjs/ ; mysql < users.sql
 
 EXPOSE 80
 
