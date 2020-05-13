@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		iputils-ping \
 		i2c-tools \
 		usbutils \
+		mariadb-client \
 	&& rm -rf /var/lib/apt/lists/*
 
 EXPOSE 80
