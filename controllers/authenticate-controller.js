@@ -1,5 +1,5 @@
 var Cryptr = require('cryptr');
-cryptr = new Cryptr('myTotalySecretKey');
+cryptr = new Cryptr('MySecretDevPassKey');
  
 var connection = require('./../config');
 module.exports.authenticate=function(req,res){

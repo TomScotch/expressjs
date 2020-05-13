@@ -19,13 +19,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		usbutils \
 	&& rm -rf /var/lib/apt/lists/*
 
-
-#RUN cd /opt/expressjs/ ; npm install express mysql cryptr
-
-#RUN cd /opt/expressjs/ ; mysql < users.sql
 EXPOSE 80
 RUN cd opt ;  git clone https://github.com/tomscotch/expressjs.git
+RUN cd /opt/expressjs/ ; mysql < users.sql
 WORKDIR /opt/expressjs/
 RUN cd /opt/expressjs/ ; npm install
+RUN npm audit fix
 CMD ["node", "index.js"]
-#CMD ["bash"]

@@ -1,4 +1,4 @@
- var express=require("express");
+var express=require("express");
 var bodyParser=require('body-parser');
  
 var connection = require('./config');
@@ -25,7 +25,6 @@ app.get('/dashboard.html', function (req, res) {
    res.sendFile( __dirname + "/" + "dashboard.html" );
 })
 
-/* route to handle login and registration */
 app.post('/api/register',registerController.register);
 app.post('/api/authenticate',authenticateController.authenticate);
  

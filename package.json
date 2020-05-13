@@ -1,19 +1,20 @@
 {
-  "name": "login",
+  "name": "expressjs",
   "version": "1.0.0",
-  "description": "login authentication",
+  "description": "login authentication, user management",
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.14.1",
     "jsonwebtoken": "^7.3.0",
     "mysql": "^2.13.0",
-    "cryptr": ""
+    "cryptr": "",
+    "nodemailer": ""
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "echo \"No Testing Available\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "tomscotch@web.de"
 }

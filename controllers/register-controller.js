@@ -1,7 +1,7 @@
 var Cryptr = require('cryptr');
 var express=require("express");
 var connection = require('./../config');
-// cryptr = new Cryptr('myTotalySecretKey');
+//cryptr = new Cryptr('MySecretDevPassKey');
  
 module.exports.register=function(req,res){
     var today = new Date();
