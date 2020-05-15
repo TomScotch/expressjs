@@ -26,5 +26,5 @@ RUN cd opt ;  git clone https://github.com/tomscotch/expressjs.git
 WORKDIR /opt/expressjs/
 RUN cd /opt/expressjs/ ; npm install
 RUN npm audit fix
-RUN mysql < users.sql ; mysqladmin -u root password devpass
+RUN mysqld & mysql < users.sql ; mysqladmin -u root password devpass
 CMD ["node", "index.js"]
