@@ -22,9 +22,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 EXPOSE 80
 RUN cd opt ;  git clone https://github.com/tomscotch/expressjs.git
-#RUN cd /opt/expressjs/ ; mysql < users.sql
+#RUN cd /opt/expressjs/ ; 
 WORKDIR /opt/expressjs/
 RUN cd /opt/expressjs/ ; npm install
 RUN npm audit fix
-RUN mysqladmin -u root password devpass
+RUN mysql < users.sql ; mysqladmin -u root password devpass
 CMD ["node", "index.js"]
