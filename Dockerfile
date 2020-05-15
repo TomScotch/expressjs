@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		iputils-ping \
 		i2c-tools \
 		usbutils \
-		mariadb-client \
+		mariadb-server \
 	&& rm -rf /var/lib/apt/lists/*
 
 EXPOSE 80
@@ -26,4 +26,5 @@ RUN cd opt ;  git clone https://github.com/tomscotch/expressjs.git
 WORKDIR /opt/expressjs/
 RUN cd /opt/expressjs/ ; npm install
 RUN npm audit fix
+RUN mysqladmin -u root password devpass
 CMD ["node", "index.js"]
