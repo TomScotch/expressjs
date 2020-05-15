@@ -13,8 +13,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"No Testing Available\" && exit 1"
+    "start": "node index.js"
   },
   "author": "tomscotch@web.de"
 }
